@@ -60,6 +60,18 @@
     border: 1px solid;
   }
 
+  .html-files {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin:0 auto;
+  }
+
+  .screen {
+    text-align: left;
+  }
+
   .basic-btn {
     border: 1px solid gray; 
     border-radius: 3px;
