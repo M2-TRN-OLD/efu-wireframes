@@ -1,0 +1,62 @@
+What data do I need?
+
+const userSchema = new mongoose.Schema({
+    name: { type: String, required: true},
+    email: { type: String, required: true},
+    username: {type: String, required: true},
+    password: {type: String,required: true}
+});
+
+const myitemSchema = new mongoose.Schema({
+    user: {type: mongoose.Schema.Types.ObjectId, ref: 'user'},
+    season: {type: String, required: true},
+    color: {type:String},
+    appareltype: {type: String, required: true},
+    shortdesc: {type: String, required: true},
+    longdesc: {type:String},
+    size: {type: String},
+    adddate: {type: Date},
+    updateDate: {type: Date, default: Date.now }
+});
+
+
+User
+*	f_name
+*  	l_name
+*	loginid_email
+*	password
+*	term_detail
+	+	term_institution
+	+	term_level
+	+	term_desc
+	+	term_classes
+		**	class_name
+		**	class_num
+		**	class_desc
+		**	class_deliverables
+			# 	deliverable_class
+			#	deliverable_type
+			#	deliverable_desc
+			#	deliverable_prephours
+
+
+Weeks
+*	week_num
+*	week_enddate
+
+
+DeliverableTypes
+*	deliverabletype_num
+*	deliverabletype_pressure
+*	deliverabletype_desc
+*	deliverabletype_prephours
+
+PlansOfAction
+*	action_date
+*	action_deliverable
+*	action_prephrs
+*	action-complete
+
+
+	
+
